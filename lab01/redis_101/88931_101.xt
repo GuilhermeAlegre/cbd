@@ -47,3 +47,12 @@ lpop Book:1:comment
 lrange Book:1:comment 0 -1
 rpop Book:1:comment
 lrange Book:1:comment 0 -1
+set var:1 "First"
+exists var:1
+set var:2 "Second"
+exists var:2
+exists var:1 var:1
+keys *
+set myfabkey "Hello" XXX
+set myfabkey "Hello" XX
+set myfabkey "Hello" NX
