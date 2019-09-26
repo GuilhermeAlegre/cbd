@@ -1,0 +1,49 @@
+keys
+keys *
+set teskey hello
+keys *
+exists teskey
+type testkey
+type teskey
+scan 1
+get teskey
+set my_list [1,2,3,4]
+get my_list
+type my_list
+set book:1
+set book:name "Infinite Jest"
+keys book:*
+scan 1
+scan 0
+scan
+scan *
+scan 0
+set Book:1 "Infinite Jest"
+get Book:1
+set Book:1:ReadAction 1
+get Book:1:ReadAction
+inc Book:1
+inc Book:1:ReadAction
+incr Book:1
+incr Book:1:ReadAction
+incrby Book:1:ReadAction 20
+get Book:1:ReadAction
+decr Book:1:ReadAction
+get Book:1:ReadAction
+decrby Book:1:ReadAction 5
+get Book:1:ReadAction
+incr Book:1 "Infinite Jest"
+mset Person:2 "Vasco Ramos" Person:3 "Diogo Silva"
+mget Person:2 Person:3
+lpush Book:1:comment "This was a fun read"
+lrange Book:1:comment 0 -1
+lpush Book:1:comment "Way too long!" "Tennis anyone?"
+lrange Book:1:comment 0 -1
+rpush Book:1:comment "This is my test"
+lrange Book:1:comment 0 -1
+lpush Book:1:commment "This was a fun read"
+lrange Book:1:comment 0 -1
+lpop Book:1:comment
+lrange Book:1:comment 0 -1
+rpop Book:1:comment
+lrange Book:1:comment 0 -1
