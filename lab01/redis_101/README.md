@@ -2,9 +2,30 @@
 
 
 ## Table of Contents
-1. [Keys](#keys)
-2. [Strings](#strings)
-3. [Lists](#lists)
+
+ - [Keys](#keys)
+	 - [EXISTS key](#exists-key)
+	 - [TYPE key](#type-key)
+	 - [DEL key](#del-key)
+	 - [KEYS pattern](#keys-pattern)
+ - [Strings](#strings)
+	 - [SET key string optional nx|xx](#set-key-string-optional-nxxx)
+	 - [GET key](#get-key)
+	 - [INCR key](#incr-key)
+	 - [INCRBY key integer](#incrby-key-integer)
+	 - [DECR key](#decr-key)
+	 - [DECRBY key integer](#decrby-key-integer)
+	 - [APPEND key value](#append-key-value)
+	 - [MSET key value [key value ...]](#mset-key-value-key-value-...)
+	 - [MGET key [key ...]](#mget-key-key-...)
+ - [Lists](#lists)
+	 - [LPUSH key value [value ...]](#lpush-key-value-value-...)
+	 - [RPUSH key value [value ...]](#rpush-key-value-value-...)
+	 - [LRANGE key start stop](#lrange-key-start-stop)
+	 - [LPOP key](#lpop-key)
+	 - [RPOP key](#rpop-key)
+	 - [LINDEX key index](#lindex-key-index)
+	 - [LINSERT key BEFORE|AFTER pivot value](#linsert-key-beforeafter-pivot-value)
 
 ## Keys
 Redis `keys` are binary safe (any binary stream can be used as a key) although the most common (and recommended) stream to use is a string key, like "Person", other file formats and binary streams like images, mp3, or other file formats, can be used.
@@ -127,7 +148,7 @@ redis> DECR mykey
 ERR ERR value is not an integer or out of range
 ```
 
-### DECRBY key
+### DECRBY key integer
 Decrements the number stored at `key` by `decrement`. If the key does not exist, it is set to `0` before performing the operation.
 ```
 redis> SET mykey "10"
