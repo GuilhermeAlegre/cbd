@@ -56,3 +56,44 @@ keys *
 set myfabkey "Hello" XXX
 set myfabkey "Hello" XX
 set myfabkey "Hello" NX
+flushdb
+keys *
+get A
+keys *
+flushdb
+keys *
+jeys *
+keys *
+get users
+smembers uers
+smembers users
+lrange users_list 0 -1
+flushdb
+keys *
+flushdb
+keys A
+keys a
+keys *
+keys susann
+keys susann *
+keys susann*
+keys *
+set ola adeus
+keys *
+keys ola
+keys *
+set adeus adeus
+keys adeus
+keys *
+mget L*
+mget Luca
+keys *
+zrange names_distribution 0 -1
+zscan distribution_names 0 *
+zscan distribution_names 0 match="*"
+zscan distribution_names 0 match *
+zrange names_distribution 0 -1
+zrange names_distribution 0 -1 WITHSCORES
+zscan names_distribution 0match A*
+zscan names_distribution 0 match A*
+zscan names_distribution 1 match A*

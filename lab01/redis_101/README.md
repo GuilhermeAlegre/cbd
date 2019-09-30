@@ -42,7 +42,7 @@ redis> DEL key1 key2 key3
 (integer) 2
 ```
 
-#### KEYS pattern
+### KEYS pattern
 Returns all keys matching `pattern`.
 ```
 redis> SET testkey "hello"
@@ -169,6 +169,7 @@ redis> MGET key1 key2 nonexisting
 2) "World"
 3) (nil)
 ```
+
 
 ## List
 Lists in Redis are ordered collections of Redis strings that allows for duplicates values.
@@ -299,6 +300,7 @@ redis> LRANGE mylist 0 -1
 2) "There"
 3) "World"
 ```
+
 
 ## Authors
 
