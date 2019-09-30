@@ -31,6 +31,7 @@ redis> TYPE key1
 
 ### DEL key
 Removes the specified keys. A key is ignored if it does not exist.
+
 Returns the number of keys that were removed.
 ```
 redis> SET key1 "Hello"
@@ -77,6 +78,7 @@ redis> SET mybabkey "Hello again" XX
 
 ### GET key
 Get the value of `key`. 
+
 If the key does not exist the special value `nil` is returned. An error is returned if the value stored at `key` is not a string, because GET only handles string values.
 ```
 redis> GET nonexisting
@@ -131,6 +133,7 @@ redis> DECRBY mykey 3
 
 ### APPEND key value
 If `key` already exists and is a string, this command appends the `value` at the end of the string. If `key` does not exist it is created and set as an empty string, so APPEND will be similar to SET in this special case.
+
 It returns the length of the string after the append operation.
 ```
 redis> EXISTS mykey
@@ -165,6 +168,136 @@ redis> MGET key1 key2 nonexisting
 1) "Hello"
 2) "World"
 3) (nil)
+```
+
+## List
+Lists in Redis are ordered collections of Redis strings that allows for duplicates values.
+
+### LPUSH key value [value ...]
+Insert all the specified values at the head of the list stored at `key`. If `key` does not exist, it is created as empty list before performing the push operations. When `key` holds a value that is not a list, an error is returned.
+
+It returns the length of the list after the push operations.
+```
+redis> LPUSH mylist "world"
+(integer) 1
+redis> LPUSH mylist "hello"
+(integer) 2
+redis> LRANGE mylist 0 -1
+1) "hello"
+2) "world"
+```
+
+### RPUSH key value [value ...]
+Insert all the specified values at the tail of the list stored at `key`. If `key` does not exist, it is created as empty list before performing the push operation. When `key` holds a value that is not a list, an error is returned.
+
+It returns the length of the list after the push operation.
+```
+redis> RPUSH mylist "hello"
+(integer) 1
+redis> RPUSH mylist "world"
+(integer) 2
+redis> LRANGE mylist 0 -1
+1) "hello"
+2) "world"
+```
+
+### LRANGE key start stop
+Returns the specified elements of the list stored at `key`. The offsets `start` and `stop` are zero-based indexes, with `0` being the first element of the list (the head of the list), `1` being the next element and so on.
+
+These offsets can also be negative numbers indicating offsets starting at the end of the list. For example, `-1` is the last element of the list, `-2` the penultimate, and so on.
+```
+redis> RPUSH mylist "one"
+(integer) 1
+redis> RPUSH mylist "two"
+(integer) 2
+redis> RPUSH mylist "three"
+(integer) 3
+redis> LRANGE mylist 0 0
+1) "one"
+redis> LRANGE mylist -3 2
+1) "one"
+2) "two"
+3) "three"
+redis> LRANGE mylist -100 100
+1) "one"
+2) "two"
+3) "three"
+redis> LRANGE mylist 5 10
+(empty list or set)
+```
+
+### LPOP key
+Removes and returns the first element of the list stored at `key`
+
+It returns the value of the first element, or `nil` when `key` does not exist.
+```
+redis> RPUSH mylist "one"
+(integer) 1
+redis> RPUSH mylist "two"
+(integer) 2
+redis> RPUSH mylist "three"
+(integer) 3
+redis> LPOP mylist
+"one"
+redis> LRANGE mylist 0 -1
+1) "two"
+2) "three"
+```
+
+### RPOP key
+Removes and returns the last element of the list stored at `key`.
+
+It returns the value of the last element, or `nil` when `key` does not exist.
+```
+redis> RPUSH mylist "one"
+(integer) 1
+redis> RPUSH mylist "two"
+(integer) 2
+redis> RPUSH mylist "three"
+(integer) 3
+redis> RPOP mylist
+"three"
+redis> LRANGE mylist 0 -1
+1) "one"
+2) "two"
+```
+
+### LINDEX key index
+Returns the element at index `index` in the list stored at `key`. The index is zero-based, so `0` means the first element, `1` the second element and so on. Negative indices can be used to designate elements starting at the tail of the list. Here, `-1` means the last element, `-2` means the penultimate and so forth.
+
+When the value at `key` is not a list, an error is returned.
+```
+redis> LPUSH mylist "World"
+(integer) 1
+redis> LPUSH mylist "Hello"
+(integer) 2
+redis> LINDEX mylist 0
+"Hello"
+redis> LINDEX mylist -1
+"World"
+redis> LINDEX mylist 3
+(nil)
+```
+
+### LINSERT key BEFORE|AFTER pivot value
+Inserts `value` in the list stored at `key` either before or after the reference value `pivot`.
+
+When `key` does not exist, it is considered an empty list and no operation is performed.
+
+An error is returned when `key` exists but does not hold a list value.
+```
+redis> RPUSH mylist "Hello"
+(integer) 1
+redis> RPUSH mylist "World"
+(integer) 2
+redis> LINSERT mylist BEFORE "World" "There"
+(integer) 3
+redis> LINSERT mylist BEFORE "Nonexistent" "Pivot"
+(integer) -1
+redis> LRANGE mylist 0 -1
+1) "Hello"
+2) "There"
+3) "World"
 ```
 
 ## Authors
