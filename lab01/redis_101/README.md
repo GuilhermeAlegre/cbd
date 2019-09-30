@@ -1,6 +1,11 @@
 ﻿# Redis Cheat Sheet
 
 
+## Table of Contents
+1. [Keys](#keys)
+2. [Strings](#strings)
+3. [Lists](#lists)
+
 ## Keys
 Redis `keys` are binary safe (any binary stream can be used as a key) although the most common (and recommended) stream to use is a string key, like "Person", other file formats and binary streams like images, mp3, or other file formats, can be used.
 
@@ -54,7 +59,7 @@ redis> KEYS *
 ```
 
 
-## String
+## Strings
 In Redis, strings are serialized characters in C. Integers are stored in Redis as a string.
 
 ### SET key string optional nx|xx
@@ -171,7 +176,7 @@ redis> MGET key1 key2 nonexisting
 ```
 
 
-## List
+## Lists
 Lists in Redis are ordered collections of Redis strings that allows for duplicates values.
 
 ### LPUSH key value [value ...]
@@ -300,7 +305,6 @@ redis> LRANGE mylist 0 -1
 2) "There"
 3) "World"
 ```
-
 
 ## Authors
 
