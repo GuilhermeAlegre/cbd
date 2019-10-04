@@ -28,6 +28,7 @@ def main():
         op = input(options)
 
         if (op == "6"):
+            print("Goodbye! :)")
             break
 
         elif (op == "1"):
@@ -49,7 +50,7 @@ def main():
 
         elif (op == "3"):
             messages_sent = r.lrange(f"RedisMessages:{person.username}", 0, -1)
-            if (messages_sent is None):
+            if (messages_sent == []):
                 print("You didn't sent any messages!")
             else:
                 print(f"--- Messages You Sent ---")
