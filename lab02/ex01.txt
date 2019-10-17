@@ -1,0 +1,40 @@
+use my_db
+db
+show dbs
+db.post.insert([
+	{
+		title:  'MongoDB Overview',
+		description:  'MongoDB is no sql database',
+		by:  'tutorials point', 
+		url:  'http://www.tutorialspoint.com', 
+		tags:  ['mongodb',  'database',  'NoSQL'], 
+		likes:  100  
+	},
+	
+	{
+		title:  'NoSQL Database', 
+		description:  "NoSQL database doesn't have tables",  
+		by:  'tutorials point', 
+		url:  'http://www.tutorialspoint.com', 
+		tags:  ['mongodb',  'database',  'NoSQL'], 
+		likes:  20,
+		comments:  [
+			{
+				user:'user1',
+				message:  'My first comment',
+				dateCreated:  new  Date(2013,11,10,2,35),
+				like:  0 
+			}  
+		] 
+	} 
+])
+db.post.find().pretty()
+db.post.find({"by":"tutorials point"}).pretty()
+db.post.find({"likes":{$lt:50}}).pretty()
+db.post.find({"likes":{$lte:50}}).pretty()
+db.post.find({"likes":{$gt:50}}).pretty()
+db.post.find({"likes":{$gte:50}}).pretty()
+db.post.find({"likes":{$ne:50}}).pretty()
+db.getCollection('post').find({$and:[{"likes":{$ne:50}},{"title": "MongoDB Overview"}]}).pretty()
+db.getCollection('post').find({"likes": {$gt:10},$or:[{"likes":{$ne:50}},{"title": "MongoDB Overview"}]}).pretty()
+db.post.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Overview'}})
