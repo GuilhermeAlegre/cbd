@@ -43,4 +43,112 @@ db.rest.find({"grades.score":{$not: {$gt: 3}}},{localidade:1, nome:1, "grades.sc
 
 #14
 // apenas retorna os restaurantes que tenham pelo menos um grade que contemple as 3 especificacoes
-db.getCollection('rest').find({"grades":{$elemMatch:{score:10,grade:"A",date:ISODate("2014-08-11T00:00:00Z")} }})
+db.rest.find({"grades":{$elemMatch:{score:10, grade:"A", date:ISODate("2014-08-11T00:00:00Z")} }})
+
+#15
+db.rest.find( {"grades.1.grade":"A", "grades.1.date":ISODate("2014-08-11T00:00:00Z")} )
+
+#16
+db.rest.find( {"address.coord.1":{$gt:42,$lte:52}}, {"_id":0, nome:1, address:1} )
+
+#17
+db.rest.find().sort( {nome:1} )
+
+#18
+db.rest.find({},{"_id":0, nome:1, gastronomia:1, localidade:1}).sort( {gastronomia:1, localidade:-1} )
+
+#19
+db.rest.find({localidade:"Brooklyn", "grades.grade":"A", gastronomia:{$ne:"American"}},{_id:0, nome:1, localidade:1, "grades.grade":1, gastronomia:1}).sort( {gastronomia:-1} )
+
+#20
+db.rest.aggregate([{"$group" : {_id:"$localidade", count:{$sum:1}}}])
+
+#21
+db.rest.aggregate([
+    {$group: {
+        _id: {
+            id: "$_id",
+            
+           avgScore: { $avg: "$grades.score" }
+            },  
+        }   
+    },
+    {$match:{"_id.avgScore":{$gt:30}}}  
+])
+
+#22
+db.rest.aggregate([
+    {$group: {_id: {
+        id: "$_id",
+        gastronomia: "$gastronomia",
+        coord: "$address.coord",
+        localidade: "$localidade",
+        total_score: {"$sum": "$grades.score"}
+        }}
+    },
+    {$match: {"_id.total_score": {$gt:70}, "_id.gastronomia":"American", "_id.coord.0":{$lt:-65}}}
+])
+
+#23
+db.rest.aggregate([{$group: {_id:"$gastronomia", total: {$sum: 1}}}, {$sort: {total:-1}}])
+
+#24
+db.rest.aggregate([{$group : {_id : {_id:"$address.rua",gastronomia:"$gastronomia"}}}, {$match:{"_id._id":"Flatbush Avenue"}},{$count: "total_restaurants"}])
+
+#25
+db.rest.aggregate([{$group: {_id:"$address.rua", total: {$sum: 1}}}, {$sort: {total:-1}}])
+
+#26
+Apresente os restaurantes ordenados por ordem descrescente do soma cumulativa do score
+db.rest.aggregate([
+        {$group: {
+            _id: {
+                id: "$_id",
+                localidade: "$localidade",
+                
+                total_score: {
+                $sum: "$grades.score"
+                }
+            },   
+            }
+        },
+        {$sort:{"_id.total_score":-1}} 
+])
+
+#27
+Apresente o restaurante que teve o valor médio do score máximo
+db.rest.aggregate([
+    {$group: {
+        _id: {
+            id: "$_id",
+            
+           avg_score: { $avg: "$grades.score" }
+            },  
+        }   
+    },
+    {$sort:{"_id.avg_score":-1}}, 
+    {$limit: 1}
+])
+
+#28
+Liste o nome e as avaliações dos restaurantes que obtiveram uma avaliação com um grade "A" e um score 10 entre a data "2014-10-01T00: 00: 00Z" e a data "2014-10-09T00: 00: 00Z"
+db.rest.find({"grades":{$elemMatch:{score:10,grade:"A",date:{$gte:ISODate("2014-10-01T00:00:00Z"),$lte:ISODate("2014-10-09T00:00:00Z")}} }})
+
+#29
+Liste todos os restaurantes ordenados pelo nome da rua em crescente.
+db.rest.find().sort( {"address.rua": 1} )
+
+#30
+Apresente o restaurante que teve o valor cumulativo do score mínimo
+db.rest.aggregate([
+    {$group: {
+        _id: {
+            id: "$_id",
+            
+           total_score: { $sum: "$grades.score" }
+            },  
+        }   
+    },
+    {$sort:{"_id.total_score":1}}, 
+    {$limit: 1}
+])
