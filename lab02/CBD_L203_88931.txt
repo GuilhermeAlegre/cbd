@@ -1,0 +1,21 @@
+// NMEC: 88931
+
+#c
+db.phones.aggregate([{"$group" : {_id:"$components.prefix", count:{$sum:1}}}])
+
+#d
+findPatterns = function (document) {
+    number = document.display.split("-")[1]
+    numberReversed = number.split("").reverse().join("")
+    if (number === numberReversed)
+        print("They are capicuas!")
+};
+
+//The query I used on the mongodb server
+
+db.phones.find().forEach(function (document) {
+    number = document.display.split("-")[1]
+    numberReversed = number.split("").reverse().join("")
+    if (number === numberReversed)
+        print("They are capicuas!")
+})
