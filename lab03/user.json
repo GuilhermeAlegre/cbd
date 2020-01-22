@@ -1,0 +1,58 @@
+{
+    "users": [{
+            "username": "rafasimoes",
+            "added_date": "2019-11-21 11:30:09.441Z",
+            "email": "rafasimoes@ua.pt"
+        },
+        {
+            "username": "ds",
+            "added_date": "2019-11-21 11:30:15.886Z",
+            "email": "ds@ua.pt"
+        },
+        {
+            "username": "dias",
+            "added_date": "2019-11-21 11:30:25.306Z",
+            "email": "dias@ua.pt"
+        },
+        {
+            "username": "andrebaiao",
+            "added_date": "2019-11-21 11:30:20.988Z",
+            "email": "andrebaiao@ua.pt"
+        },
+        {
+            "username": "escaleira",
+            "added_date": "2019-11-21 11:30:04.290Z",
+            "email": "escaleira@ua.pt"
+        },
+        {
+            "username": "pedroliv",
+            "added_date": "2019-11-21 11:30:30.435Z",
+            "email": "pedroliv@ua.pt"
+        },
+        {
+            "username": "vascoalramos",
+            "added_date": "2019-11-21 11:27:12.442Z",
+            "email": "vascoalramos@ua.pt"
+        },
+        {
+            "username": "mota",
+            "added_date": "2019-11-21 11:29:52.484Z",
+            "email": "mota@ua.pt"
+        },
+        {
+            "username": "joaovasconcelos",
+            "added_date": "2019-11-21 11:29:23.375Z",
+            "email": "jmvr@ua.pt"
+        },
+        {
+            "username": "vr",
+            "added_date": "2019-11-21 00:00:00.000Z",
+            "email": "vascoalramos@outlook.pt"
+        },
+        {
+            "username": "tiagocm",
+            "added_date": "2019-11-21 11:29:46.534Z",
+            "email": "tiagocm@ua.pt"
+        }
+    ]
+}

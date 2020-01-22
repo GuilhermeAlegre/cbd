@@ -1,0 +1,124 @@
+{
+    "videos": [{
+            "id": 5,
+            "added_date": "2019-11-25 00:00:00.000Z",
+            "author": "escaleira",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["jogo", "lindo", "tvshows", "vlog"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 10,
+            "added_date": "2019-11-30 00:00:00.000Z",
+            "author": "pedroliv",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["musica", "trailer"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 11,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "author": "vr",
+            "count_rating": 10.0,
+            "description": "Macbook 16'' Review: A Programmer Perspective",
+            "followers": ["ds", "joaovasconcelos"],
+            "name": "Spectacular video!",
+            "tag": ["new_tag"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 1,
+            "added_date": "2019-11-21 00:00:00.000Z",
+            "author": "vascoalramos",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["facil", "food", "tvshows"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 8,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "author": "andrebaiao",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["moda", "musica", "trailer"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 2,
+            "added_date": "2019-11-22 00:00:00.000Z",
+            "author": "joaovasconcelos",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["facil", "filme"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 4,
+            "added_date": "2019-11-24 00:00:00.000Z",
+            "author": "mota",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "tiagocm"],
+            "name": "Awesome Video!",
+            "tag": ["filme", "lindo"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 7,
+            "added_date": "2019-11-27 00:00:00.000Z",
+            "author": "ds",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["mota", "vascoalramos"],
+            "name": "Awesome Video!",
+            "tag": ["jogo", "moda"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 6,
+            "added_date": "2019-11-26 00:00:00.000Z",
+            "author": "rafasimoes",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["food", "jogo", "vlog"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 9,
+            "added_date": "2019-11-29 00:00:00.000Z",
+            "author": "dias",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["moda", "musica", "tvshows"],
+            "total_rating": 120.0
+        },
+        {
+            "id": 3,
+            "added_date": "2019-11-23 00:00:00.000Z",
+            "author": "tiagocm",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "name": "Awesome Video!",
+            "tag": ["facil", "filme", "food", "lindo", "vlog"],
+            "total_rating": 120.0
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "comments": [{
+            "author": "rafasimoes",
+            "video_id": 8,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "ds",
+            "video_id": 1,
+            "added_date": "2019-11-21 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "ds",
+            "video_id": 11,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "commment_text": "Meeh"
+        },
+        {
+            "author": "dias",
+            "video_id": 5,
+            "added_date": "2019-11-25 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "dias",
+            "video_id": 7,
+            "added_date": "2019-11-27 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "andrebaiao",
+            "video_id": 9,
+            "added_date": "2019-11-29 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "escaleira",
+            "video_id": 10,
+            "added_date": "2019-11-30 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "pedroliv",
+            "video_id": 6,
+            "added_date": "2019-11-26 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "vascoalramos",
+            "video_id": 2,
+            "added_date": "2019-11-22 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "mota",
+            "video_id": 3,
+            "added_date": "2019-11-23 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        },
+        {
+            "author": "tiagocm",
+            "video_id": 4,
+            "added_date": "2019-11-24 00:00:00.000Z",
+            "commment_text": "Video lindo"
+        }
+    ]
+}

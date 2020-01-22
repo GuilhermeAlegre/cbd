@@ -1,0 +1,123 @@
+{
+    "videos": [{
+            "author": "rafasimoes",
+            "added_date": "2019-11-26 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 6,
+            "name": "Awesome Video!",
+            "tag": ["food", "jogo", "vlog"],
+            "total_rating": 120.0
+        } {
+            "author": "ds",
+            "added_date": "2019-11-27 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["mota", "vascoalramos"],
+            "id": 7,
+            "name": "Awesome Video!",
+            "tag": ["jogo", "moda"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "dias",
+            "added_date": "2019-11-29 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 9,
+            "name": "Awesome Video!",
+            "tag": ["moda", "musica", "tvshows"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "andrebaiao",
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 8,
+            "name": "Awesome Video!",
+            "tag": ["moda", "musica", "trailer"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "escaleira",
+            "added_date": "2019-11-25 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 5,
+            "name": "Awesome Video!",
+            "tag": ["jogo", "lindo", "tvshows", "vlog"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "pedroliv",
+            "added_date": "2019-11-30 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 10,
+            "name": "Awesome Video!",
+            "tag": ["musica", "trailer"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "vascoalramos",
+            "added_date": "2019-11-21 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 1,
+            "name": "Awesome Video!",
+            "tag": ["facil", "food", "tvshows"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "mota",
+            "added_date": "2019-11-24 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "tiagocm"],
+            "id": 4,
+            "name": "Awesome Video!",
+            "tag": ["filme", "lindo"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "joaovasconcelos",
+            "added_date": "2019-11-22 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 2,
+            "name": "Awesome Video!",
+            "tag": ["facil", "filme"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "vr",
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Awesome",
+            "followers": ["ds", "joaovasconcelos"],
+            "id": 11,
+            "name": "Spectacular video!",
+            "tag": ["new_tag"],
+            "total_rating": 120.0
+        },
+        {
+            "author": "tiagocm",
+            "added_date": "2019-11-23 00:00:00.000Z",
+            "count_rating": 10.0,
+            "description": "Incrivel!!",
+            "followers": ["ds", "mota"],
+            "id": 3,
+            "name": "Awesome Video!",
+            "tag": ["facil", "filme", "food", "lindo", "vlog"],
+            "total_rating": 120.0
+        }
+    ]
+}

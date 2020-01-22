@@ -1,0 +1,23 @@
+{
+    "following": [{
+            "user": "ds",
+            "video_id": 1,
+            "comments": ["Muito bom", "Ótimo", "Perfeito"]
+        },
+        {
+            "user": "ds",
+            "video_id": 3,
+            "comments": ["Péssimo", "Average", "Muito mau"]
+        },
+        {
+            "user": "ds",
+            "video_id": 4,
+            "comments": ["Espetacular", "Lindo", "Muito mau"]
+        },
+        {
+            "user": "vascoalramos",
+            "video_id": 1,
+            "comments": ["Espetacular", "Lindo", "Muito mau"]
+        }
+    ]
+}

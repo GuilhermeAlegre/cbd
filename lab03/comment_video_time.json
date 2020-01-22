@@ -1,0 +1,75 @@
+{
+    "comments": [{
+            "video_id": 5,
+            "added_date": "2019-11-25 00:00:00.000Z",
+            "author": "dias",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 10,
+            "added_date": "2019-11-30 00:00:00.000Z",
+            "author": "escaleira",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 11,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "author": "ds",
+            "commment_text": "Meeh"
+        },
+        {
+            "video_id": 1,
+            "added_date": "2019-11-30 00:00:00.000Z",
+            "author": "ds",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 1,
+            "added_date": "2019-11-21 00:00:00.000Z",
+            "author": "ds",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 8,
+            "added_date": "2019-11-28 00:00:00.000Z",
+            "author": "rafasimoes",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 2,
+            "added_date": "2019-11-22 00:00:00.000Z",
+            "author": "vascoalramos",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 4,
+            "added_date": "2019-11-24 00:00:00.000Z",
+            "author": "tiagocm",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 7,
+            "added_date": "2019-11-27 00:00:00.000Z",
+            "author": "dias",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 6,
+            "added_date": "2019-11-26 00:00:00.000Z",
+            "author": "pedroliv",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 9,
+            "added_date": "2019-11-29 00:00:00.000Z",
+            "author": "andrebaiao",
+            "commment_text": "Video lindo"
+        },
+        {
+            "video_id": 3,
+            "added_date": "2019-11-23 00:00:00.000Z",
+            "author": "mota",
+            "commment_text": "Video lindo"
+        }
+    ]
+}
